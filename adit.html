@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body {
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        /* background-color: #78B9B5; */
+        background: linear-gradient(135deg, rgb(206, 145, 84), rgb(98, 16, 16));
+        text-align: center;
+        font-size: 24px;
+        line-height: 50px;
+        border: 2px solid black;
+        color: #fffefe;
+    }
+
+    header img {
+        float: left;
+        margin: 5px;
+    }
+
+    nav {
+        /* background-color: #0F828C; */
+        background: linear-gradient(135deg, rgb(206, 161, 84), rgb(42, 25, 0));
+        text-align: center;
+        font-size: 24px;
+        line-height: 50px;
+        border: 2px solid black;
+        margin: 10px 0;
+        padding: 0 20px;
+    }
+
+    nav a {
+        margin: 0 30px;
+        padding: 10px 10px;
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px; /* space between leftframe and rightframe */
+    }
+
+    .leftframe {
+        /* background-color: #065084; */
+        background: linear-gradient(135deg, rgb(206, 137, 84), rgb(114, 32, 12));
+        color: #ffffff;
+        width: 23%;
+        height: 640px;
+        border: 2px solid #065084;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    .leftframe a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .rightframe {
+        background-color: #065084;
+        color: #ffffff;
+        width: 75%;
+        border: 2px solid #065084;
+        box-sizing: border-box;
+    }
+
+    iframe {
+        width: 100%;
+        height: 500px;
+        border: none;
+    }
+
+    /* Responsive for small screens */
+    @media (max-width: 768px) {
+        .leftframe, .rightframe {
+            width: 100%;
+        }
+
+        header img {
+            display: none;
+        }
+
+        nav a {
+            display: block;
+            margin: 5px 0;
+        }
+
+        iframe {
+            height: 300px;
+        }
+    }
+    </style>
+  <title>University site</title>
+</head>
+<body>
+    <header>
+        <img src="images.png" alt="images" height="40">
+        ADIT
+    </header>
+
+    <nav>
+        <a href="home.html">HOME</a>
+        <a href="istar.html">ISTAR</a>
+        <a href="semcom.html">SEMCOM</a>
+        <a href="adit.html">ADIT</a>
+        <a href="mbit.html">MBIT</a>
+    </nav>
+
+    <div class="main">
+        <div class="leftframe">
+            <ul>
+                <li><a href="bca.html" target="deptFrame">BCA DEPT</a></li>
+                <li><a href="bba.html" target="deptFrame">BBA DEPT</a></li>
+                <li><a href="bsc-it.html" target="deptFrame">BSC-IT DEPT</a></li>
+            </ul>
+        </div>
+
+        <div class="rightframe">
+            <iframe name="deptFrame" src="bca.html"></iframe>
+        </div>
+    </div>
+</body>
+</html>

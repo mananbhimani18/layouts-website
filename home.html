@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            width: 1200px;              /* Fixed width layout */
+            margin-left: auto;
+            margin-right: auto;
+            overflow-x: hidden;         /* Prevent horizontal scrolling */
+        }
+
+        header {
+            height: 50px;
+            width: 1200px;              /* Fixed width */
+            background: linear-gradient(135deg, rgb(109, 84, 206), rgb(16, 32, 98));
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            line-height: 50px;
+            border: 4px solid black;
+        }
+
+        nav {
+            height: 50px;
+            width: 1200px;              /* Fixed width */
+            background: linear-gradient(135deg, rgb(41, 28, 105), rgb(98, 124, 229));
+            text-align: center;
+            font-size: 24px;
+            line-height: 50px;
+            border: 4px solid black;
+            margin: 10px 0;      
+            padding: 0 20px;      
+            color: white; 
+            box-sizing: border-box;
+        }
+
+        nav a {
+            margin: 0 30px;      
+            padding: 10px 10px;    
+            text-decoration: none; 
+            color: rgb(255, 255, 255);         
+        }
+
+        .main {
+            display: flex;       
+            gap: 20px;            
+            padding: 10px;       
+            width: 1200px;        /* Fixed width */
+            box-sizing: border-box;
+        }
+
+        .leftframe {
+            background: linear-gradient(135deg, rgb(183, 170, 236), rgb(5, 44, 56));
+            color: #000000;
+            height: 630px;
+            width: 350px;
+            border: 4px solid #000000;
+            padding: 15px;       
+            box-sizing: border-box;
+        }
+
+        .rightframe {
+            width: 790px;         /* Fixed width (1200 - leftframe - gaps/borders) */
+            color: #ffffff;
+            background: linear-gradient(135deg, rgb(5, 53, 105), rgb(32, 16, 98));
+            height: 630px;
+            border: 4px solid #000000;
+            padding: 15px;       
+            box-sizing: border-box;
+        }
+    </style>
+  <title>University site</title>
+</head>
+<body>
+    <header>
+        <img src="images.png" style="height: 3rem;" alt="images" height="40" align="left">
+        CVMU 
+    </header>
+
+    <nav>
+        <a href="home.html">HOME</a>
+        <a href="istar.html">ISTAR</a>
+        <a href="semcom.html">SEMCOM</a>
+        <a href="adit.html">ADIT</a>
+        <a href="mbit.html">MBIT</a>
+    </nav>
+
+    <div class="main">
+        <div class="leftframe">
+            <ul>
+                <li>FACULTY OF SCIENCE</li>
+                <li>FACULTY OF COMMERCE</li>
+                <li>FACULTY OF ARTS</li>
+            </ul>
+        </div>
+
+        <div class="rightframe">
+            <p>
+                <b>The CVMU</b><br><br>
+                Charutar Vidya Mandal University (CVMU), founded in 2019,
+                is a private university with its campus based in Vallabh Vidyanagar, Anand, Gujarat.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- old code -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            height: 50px;
+            /* background-color: #ff0000; */
+            background: linear-gradient(135deg, rgb(109, 84, 206), rgb(16, 32, 98));
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            line-height: 50px;
+            border: 4px solid black;
+        }
+
+        nav {
+            height: 50px;
+            /* background-color: #00eaff; */
+            background: linear-gradient(135deg, rgb(41, 28, 105), rgb(98, 124, 229));
+            text-align: center;
+            font-size: 24px;
+            line-height: 50px;
+            border: 4px solid black;
+            margin: 10px 0;      
+            padding: 0 20px;      
+            color: white; 
+        }
+
+        nav a {
+            margin: 0 30px;      
+            padding: 10px 10px;    
+            text-decoration: none; 
+            color: rgb(255, 255, 255);         
+        }
+
+        .main {
+            display: flex;       
+            gap: 20px;            
+            padding: 10px;       
+        }
+
+        .leftframe {
+            /* background-color: #0a3452; */
+            background: linear-gradient(135deg, rgb(183, 170, 236), rgb(5, 44, 56));
+            color: #000000;
+            height: 630px;
+            width: 350px;
+            border: 4px solid #000000;
+            padding: 15px;       
+            box-sizing: border-box;
+        }
+
+        .rightframe {
+            flex: 1;           
+            color: #ffffff;
+            /* background-color: #065084; */
+            background: linear-gradient(135deg, rgb(5, 53, 105), rgb(32, 16, 98));
+            height: 630px;
+            border: 4px solid #000000;
+            padding: 15px;       
+            box-sizing: border-box;
+        }
+    </style>
+  <title>University site</title>
+</head>
+<body>
+    <header>
+        <img src="images.png" style="height: 3rem;" alt="images" height="40" align="left">
+        CVMU 
+    </header>
+
+    <nav>
+        <a href="home.html">HOME</a>
+        <a href="istar.html">ISTAR</a>
+        <a href="semcom.html">SEMCOM</a>
+        <a href="adit.html">ADIT</a>
+        <a href="mbit.html">MBIT</a>
+    </nav>
+
+    <div class="main">
+        <div class="leftframe">
+            <ul>
+                <li>FACULTY OF SCIENCE</li>
+                <li>FACULTY OF COMMERCE</li>
+                <li>FACULTY OF ARTS</li>
+            </ul>
+        </div>
+
+        <div class="rightframe">
+            <p>
+                <b>The CVMU</b><br><br>
+                Charutar Vidya Mandal University (CVMU), founded in 2019,
+                is a private university with its campus based in Vallabh Vidyanagar, Anand, Gujarat.
+            </p>
+        </div>
+    </div>
+</body>
+</html> -->

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            width: 1200px;              /* Fixed layout width */
+            margin-left: auto;
+            margin-right: auto;
+            overflow-x: hidden;
+        }
+
+        header {
+            height: 50px;
+            width: 1200px;              /* Fixed width */
+            background: linear-gradient(135deg, rgb(109, 84, 206), rgb(16, 32, 98));
+            text-align: center;
+            font-size: 24px;
+            color: white;
+            line-height: 50px;
+            border: 2px solid black;
+            box-sizing: border-box;
+        }
+
+        nav {
+            height: 50px;
+            width: 1200px;              /* Fixed width */
+            background: linear-gradient(135deg, rgb(59, 145, 48), rgb(7, 91, 25));
+            text-align: center;
+            font-size: 24px;
+            line-height: 50px;
+            border: 2px solid black;
+            margin: 10px 0;      
+            padding: 0 20px;       
+            box-sizing: border-box;
+        }
+
+        nav a {
+            margin: 0 30px;      
+            padding: 10px 10px;    
+            text-decoration: none; 
+            color: rgb(255, 255, 255);         
+        }
+
+        .main {
+            display: flex;      
+            gap: 20px;          
+            padding: 10px;      
+            box-sizing: border-box;
+            width: 1200px;      /* Fixed width */
+        }
+
+        .leftframe {
+            background: linear-gradient(135deg, rgb(161, 206, 84), rgb(92, 98, 16));
+            color: #000000;
+            height: 630px;
+            width: 350px;       /* Fixed width */
+            border: 4px solid #000000;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .leftframe a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .leftframe a:hover {
+            text-decoration: underline;
+        }
+
+        .rightframe {
+            width: 790px;       /* Fixed width (1200 - leftframe - gap - borders) */
+            background: linear-gradient(135deg, rgb(161, 206, 84), rgb(7, 91, 25));
+            border: 4px solid #000000;
+            height: 630px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .rightframe iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+    <title>University site</title>
+</head>
+<body>
+    <header>
+        <img src="images.png" alt="images" height="40" align="left">
+        ISTAR
+    </header>
+
+    <nav>
+        <a href="home.html">HOME</a>
+        <a href="istar.html">ISTAR</a>
+        <a href="semcom.html">SEMCOM</a>
+        <a href="adit.html">ADIT</a>
+        <a href="mbit.html">MBIT</a>
+    </nav>
+
+    <div class="main">
+        <div class="leftframe">
+            <ul>
+                <li><a href="comp.html" target="deptFrame">COMPUTER DEPARTMENT</a></li>
+                <li><a href="chem.html" target="deptFrame">CHEMISTRY DEPARTMENT</a></li>
+                <li><a href="physics.html" target="deptFrame">PHYSICS DEPARTMENT</a></li>
+            </ul>
+        </div>
+
+        <div class="rightframe">
+            <iframe name="deptFrame" src="comp.html"></iframe>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!-- Old code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            height: 50px;
+            /* background-color: #6c9639; */
+            background: linear-gradient(135deg, rgb(109, 84, 206), rgb(16, 32, 98));
+            text-align: center;
+            font-size: 24px;
+            color: white    ;
+            line-height: 50px;
+            border: 2px solid black;
+        }
+
+        nav {
+            height: 50px;
+            /* background-color: #0F828C; */
+            background: linear-gradient(135deg, rgb(59, 145, 48), rgb(7, 91, 25));
+            text-align: center;
+            font-size: 24px;
+            line-height: 50px;
+            border: 2px solid black;
+            margin: 10px 0;      
+            padding: 0 20px;       
+        }
+
+        nav a {
+            margin: 0 30px;      
+            padding: 10px 10px;    
+            text-decoration: none; 
+            color: rgb(255, 255, 255);         
+        }
+
+        .main {
+            display: flex;      /* ✅ use flexbox */
+            gap: 20px;          /* ✅ space between frames */
+            padding: 10px;      /* ✅ outer padding */
+            box-sizing: border-box;
+        }
+
+        .leftframe {
+            /* background-color: #065084; */
+            background: linear-gradient(135deg, rgb(161, 206, 84), rgb(92, 98, 16));
+            color: #000000;
+            height: 630px;
+            width: 350px;
+            border: 4px solid #000000;
+            padding: 15px;      /* ✅ inner padding */
+            box-sizing: border-box;
+        }
+
+        .leftframe a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .leftframe a:hover {
+            text-decoration: underline;
+        }
+
+        .rightframe {
+            flex: 1;            /* ✅ takes remaining space */
+            /* background-color: #065084; */
+            background: linear-gradient(135deg, rgb(161, 206, 84), rgb(7, 91, 25));
+            border: 4px solid #000000;
+            height: 630px;
+            padding: 0;         /* iframe will cover full area */
+            box-sizing: border-box;
+        }
+
+        .rightframe iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+    <title>University site</title>
+</head>
+<body>
+    <header>
+        <img src="images.png" alt="images" height="40" align="left">
+        ISTAR
+    </header>
+
+    <nav>
+        <a href="home.html">HOME</a>
+        <a href="istar.html">ISTAR</a>
+        <a href="semcom.html">SEMCOM</a>
+        <a href="adit.html">ADIT</a>
+        <a href="mbit.html">MBIT</a>
+    </nav>
+
+    <div class="main">
+        <div class="leftframe">
+            <ul>
+                <li><a href="comp.html" target="deptFrame">COMPUTER DEPARTMENT</a></li>
+                <li><a href="chem.html" target="deptFrame">CHEMISTRY DEPARTMENT</a></li>
+                <li><a href="physics.html" target="deptFrame">PHYSICS DEPARTMENT</a></li>
+            </ul>
+        </div>
+
+        <div class="rightframe">
+            <iframe name="deptFrame" src="comp.html"></iframe>
+        </div>
+    </div>
+</body>
+</html> -->
